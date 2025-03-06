@@ -1,4 +1,6 @@
-<x-layout></x-layout>
+<x-layout>
+    <x-slot:heading>Home Page</x-slot:heading>
+</x-layout>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,47 +8,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Welcome</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .header {
-            background-color: #f4f4f4;
-            padding: 50px 20px;
-            font-size: 24px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.js"></script>
 </head>
-<body>
-    <div class="header">
-        <h1>Welcome to Our Website</h1>
+<body class="font-sans bg-gray-100">
+
+    <div class="bg-gray-200 text-center py-20">
+        <h1 class="text-4xl font-extrabold text-blue-600">Welcome to Our Website</h1>
     </div>
 
-    <div class="container">
-        <h2>Your Trusted Source for Quality Services</h2>
-        <p>We provide the best solutions tailored to your needs. Explore our services and get in touch with us.</p>
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-10 text-center">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Your Trusted Source for Quality Services</h2>
+        <p class="text-lg text-gray-600 mb-6">We provide the best solutions tailored to your needs. Explore our services and get in touch with us.</p>
         
-        <a href="about.html" class="btn">Learn More</a>
+        <a href="about.html" class="inline-block py-3 px-6 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-200">Learn More</a>
     </div>
 
 </body>
