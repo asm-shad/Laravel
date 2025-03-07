@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot:heading>Home Page</x-slot:heading>
+    <h1>{{$greeting}}</h1>
 </x-layout>
 
 <!DOCTYPE html>
@@ -19,7 +20,6 @@
     <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-10 text-center">
         <h2 class="text-3xl font-semibold text-gray-800 mb-4">Your Trusted Source for Quality Services</h2>
         <p class="text-lg text-gray-600 mb-6">We provide the best solutions tailored to your needs. Explore our services and get in touch with us.</p>
-        
         <a href="about.html" class="inline-block py-3 px-6 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-200">Learn More</a>
     </div>
 

@@ -14,8 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'jobs' => [
+            [
+                'title' => 'Director', // Fixed the missing quote
+                'salary' => '$50,000'
+            ],
+            [
+                'title' => 'Manager', // Fixed the missing quote
+                'salary' => '$40,000'
+            ],
+            [
+                'title' => 'Employee', // Fixed the missing quote
+                'salary' => '$30,000'
+            ]
+        ]
+    ]);
 });
+
 
 Route::get('/about', function () {
     return view('about');
