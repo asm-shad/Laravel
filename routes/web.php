@@ -13,30 +13,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home Page Route
 Route::get('/', function () {
-    return view('home', [
-        'jobs' => [
-            [
-                'title' => 'Director', // Fixed the missing quote
-                'salary' => '$50,000'
-            ],
-            [
-                'title' => 'Manager', // Fixed the missing quote
-                'salary' => '$40,000'
-            ],
-            [
-                'title' => 'Employee', // Fixed the missing quote
-                'salary' => '$30,000'
-            ]
-        ]
+    return view('home');
+});
+
+// Jobs Page Route
+Route::get('/jobs', function () {
+    return view('jobs', [
+'jobs' => [
+    ['id' => 1, 'title' => 'Director', 'salary' => '$50,000'],
+    ['id' => 2, 'title' => 'Manager', 'salary' => '$40,000'],
+    ['id' => 3, 'title' => 'Employee', 'salary' => '$30,000'],
+]
     ]);
 });
 
-
-Route::get('/about', function () {
-    return view('about');
-});
-
+// Contact Page Route
 Route::get('/contact', function () {
+
     return view('contact');
+});
+Route::get('/jobs/{id}', function ($id) {
+    $jobs = [
+    ['id' => 1, 'title' => 'Director', 'salary' => '$50,000'],
+    ['id' => 2, 'title' => 'Manager', 'salary' => '$40,000'],
+    ['id' => 3, 'title' => 'Employee', 'salary' => '$30,000'],
+    ];
+
+    //    $job = Illuminate\Support\Arr::first($jobs, fn($job, fn($job) => $job['id']== $id));
+    $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
+
+
+    return view('job', ['job' =>$job]);
 });

@@ -1,13 +1,20 @@
 <x-layout>
-    <x-slot:heading>About Page</x-slot:heading>
+    <x-slot:heading>Jobs Page</x-slot:heading>
 </x-layout>
+
+<ul>
+    @foreach ($jobs as $job)
+        <a href="/jobs/{{$job['id']}}"><strong>{{$job['title']}}:</strong> Pays Salary {{$job['salary']}} per year.</a>
+    <br>
+        @endforeach
+</ul>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Jobs Listening</title>
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.js"></script>
 </head>
 <body class="font-sans bg-gray-100">
