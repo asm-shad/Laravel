@@ -12,6 +12,10 @@ use App\Models\Job;
 
 // Home Page Route
 Route::get('/', function () {
+    $jobs = Job::all();
+
+    // dd($jobs);
+
     return view('home');
 });
 
